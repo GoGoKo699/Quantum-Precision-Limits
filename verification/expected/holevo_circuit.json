@@ -1,0 +1,121 @@
+{
+  "certificate": {
+    "arithmetic": "exact rational primal/dual checks; floating point only proposes witnesses",
+    "certified_width_upper": "0.000000013",
+    "constraint_residual_exact": "0",
+    "dual_beta": "2243934763/25000000000",
+    "fisher_lower_bound_exact": "4/5",
+    "fisher_matrix_float": [
+      [
+        0.9707127178733348,
+        -0.06843690630470935
+      ],
+      [
+        -0.06843690630470935,
+        0.8400804101827091
+      ]
+    ],
+    "fisher_min_eigenvalue_float": 0.8107931280560439,
+    "holevo_lower": "2.250762525",
+    "holevo_upper": "2.250762539",
+    "incompatibility_gap_lower": "0.017402294",
+    "sld_trace_lower": "2.233360231",
+    "sld_trace_upper": "2.233360232",
+    "witness_sha256": "efe642f8b027133d39a9ea9629eff08a7e38628e9d9dc4c0bdecb928296a5a4b"
+  },
+  "compression_check": {
+    "compressed_dimension": 6,
+    "compressed_lower_float": 2.250762525538578,
+    "compressed_upper_float": 2.2507625593344343,
+    "physical_dimension": 16,
+    "scope": "Numerical dimension-reduction check; the full-model interval is certified separately by exact rational arithmetic.",
+    "tangent_projection_residual_float": 8.052173710477019e-16
+  },
+  "model": {
+    "gates": [
+      {
+        "cos": "3/5",
+        "paulis": {
+          "0": "X",
+          "1": "X"
+        },
+        "sin": "4/5"
+      },
+      {
+        "cos": "5/13",
+        "paulis": {
+          "1": "Z"
+        },
+        "sin": "12/13"
+      },
+      {
+        "cos": "8/17",
+        "paulis": {
+          "1": "X",
+          "2": "X"
+        },
+        "sin": "15/17"
+      },
+      {
+        "cos": "7/25",
+        "paulis": {
+          "0": "Z",
+          "1": "Z"
+        },
+        "sin": "24/25"
+      },
+      {
+        "cos": "20/29",
+        "paulis": {
+          "2": "X",
+          "3": "X"
+        },
+        "sin": "21/29"
+      },
+      {
+        "cos": "12/37",
+        "paulis": {
+          "2": "Z"
+        },
+        "sin": "35/37"
+      },
+      {
+        "cos": "9/41",
+        "paulis": {
+          "1": "Z",
+          "2": "Z"
+        },
+        "sin": "40/41"
+      },
+      {
+        "cos": "11/61",
+        "paulis": {
+          "0": "X",
+          "3": "X"
+        },
+        "sin": "60/61"
+      },
+      {
+        "cos": "28/53",
+        "paulis": {
+          "0": "Z"
+        },
+        "sin": "45/53"
+      }
+    ],
+    "generators": [
+      "X_1/2",
+      "Y_1/2"
+    ],
+    "occupied_weights": [
+      "3/4",
+      "1/4"
+    ],
+    "parameters": 2,
+    "physical_dimension": 16,
+    "qubits": 4,
+    "real_coordinates_per_estimator": 58,
+    "state_rank": 2
+  },
+  "scope": "One fixed four-qubit example; no hardware, query-complexity, or generic-SDP benchmark."
+}
