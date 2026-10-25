@@ -7,6 +7,12 @@ certified classical Holevo-bound value for low-rank circuit models.
 
 Authoritative files:
 - README.md: question, principal guarantees, example, reproduction, scope, contact.
+- learning/MILESTONES.md: exactly 30 project-defined understanding targets in
+  background/preliminaries and narrative/innovation, with dependencies and sources.
+- learning/ESTIMATION_BRIDGE.md: the single selected educational anchor,
+  Demkowicz-Dobrzanski, Gorecki, and Guta (2020), Multi-parameter estimation beyond
+  Quantum Fisher Information, arXiv:2001.11742v2; verified reading sections,
+  notation/assumption mapping, worked example, and the bridge to the algorithm.
 - science/model.md: dimensions, distance conventions, local model, Holevo functional.
 - science/bures_tomography.md: full tomography proof, published dependencies, finite
   precision, rank preservation, query and gate accounting, matching query lower bound.
@@ -26,6 +32,9 @@ Authoritative files:
 
 Reading routes:
 - Scientific story: model, circuit access, applications, conditioning limits.
+- Study: selected-source bridge for the conceptual entry, milestone map for the
+  dependency order, then each milestone's canonical scientific source. The anchor
+  explains estimation theory; primary algorithmic papers remain proof dependencies.
 - Tomography theorem: model's metric convention, then the complete Bures proof.
 - Precision theorem: compression/stability, certified optimization, circuit access.
 - Exact example: applications, then verify_holevo_circuit.py and its expected output.
@@ -42,6 +51,8 @@ Preserve these distinctions:
   constants and the exact error budget in circuit_access.md.
 - The Holevo result is a local value certificate, not a measurement synthesis or
   a finite-sample performance guarantee for an uncontrolled laboratory device.
+  The low-rank algorithmic promises do not alone prove attainability for every
+  boundary model; the operational interpretation needs an applicable theorem.
 - Query lower bounds use the stated opaque oracle model. Explicit classical
   angles may make a toy example easy, and branch-selective access can be stronger.
 - Direct overlap computation, tractable classical circuits, and analytic special

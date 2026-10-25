@@ -1,7 +1,7 @@
 # Quantum Precision Limits
 
-**How can coherent access to a quantum circuit determine an attainable
-multiparameter precision limit without reconstructing its large physical state?**
+**How can coherent access to a quantum circuit determine a multiparameter
+Holevo precision bound without reconstructing its large physical state?**
 
 This project studies Bures tomography from a state-preparation unitary and uses
 it to compute certified Holevo bounds for low-rank sensing models. The central
@@ -55,6 +55,22 @@ For specialists, the proof route is tomography → compression/stability →
 certified optimization → circuit access. The applications explain the physical
 meaning and comparisons. The [LLM reading guide](llms.txt) maps questions to
 their authoritative files.
+
+## Study the project
+
+The single educational anchor is Rafał Demkowicz-Dobrzański, Wojciech Górecki,
+and Mădălin Guţă's [*Multi-parameter estimation beyond Quantum Fisher
+Information*](https://arxiv.org/html/2001.11742v2) (2020). It explains the
+statistical meaning of simultaneous precision and the Holevo bound.
+
+Start with the [source-to-project bridge](learning/ESTIMATION_BRIDGE.md), which
+selects the relevant sections, translates notation and assumptions, and works
+through how the estimation problem becomes a certified quantum computation.
+The [30-milestone map](learning/MILESTONES.md) organizes the full project into
+background/preliminaries and narrative/innovation, with explicit understanding
+targets, dependencies, and links to the proofs. The quantum acquisition and
+certification arguments are developed in this repository and retain their
+primary research dependencies.
 
 ## A checkable circuit example
 
