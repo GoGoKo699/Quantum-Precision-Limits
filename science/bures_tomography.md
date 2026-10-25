@@ -15,7 +15,7 @@ Let $`\mathcal H_S\cong\mathbb C^d`$ be a designated system register, with $`d\g
 U|0^a\rangle=|\Psi\rangle_{SE},\qquad
 \rho=\mathrm{Tr}_E|\Psi\rangle\langle\Psi|,
 \qquad \mathrm{rank}\rho\le r\le d.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 
@@ -27,7 +27,7 @@ For density matrices, use the root-fidelity convention
 ```math
 F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1,\qquad
 D_B(\rho,\sigma)=\sqrt{2-2F(\rho,\sigma)}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 
@@ -40,7 +40,7 @@ For $`0<\epsilon\le1/4`$ and $`0<\delta\le1/3`$, there is an algorithm that, wit
 
 ```math
 D_B(\rho,\widehat\rho)\le\epsilon
-\tag{3}
+\qquad\text{(3)}
 ```
 
 
@@ -49,7 +49,7 @@ using
 
 ```math
 Q=\widetilde O\!\left(\frac{dr}{\epsilon}\right)
-\tag{4}
+\qquad\text{(4)}
 ```
 
 
@@ -60,7 +60,7 @@ The ideal spectral output has rank at most
 
 ```math
 \min\{d,\,O(r\log(1/\epsilon))\}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 
@@ -73,7 +73,7 @@ If $`G_U`$ denotes the gate cost of implementing a query, a conservative gate bo
 \widetilde O\!\left[
 \frac{dr}{\epsilon}\left(G_U+a+d^{5/2}\right)
 \right].
-\tag{6}
+\qquad\text{(6)}
 ```
 
 
@@ -83,7 +83,7 @@ This uses $`O(a)`$ clean work qubits for zero-state phases and includes explicit
 ```math
 O\!\left(a+d^2\mathrm{polylog}
 \frac{dr}{\epsilon\delta}\right)
-\tag{7}
+\qquad\text{(7)}
 ```
 
 
@@ -100,7 +100,7 @@ The published SODA 2023 version of [1, Theorem 8.2], with Schatten parameter $`q
 
 ```math
 \|Z-\sigma\|_F\le\eta
-\tag{8}
+\qquad\text{(8)}
 ```
 
 
@@ -114,7 +114,7 @@ Q_F(d,r,\eta,\beta)
 \log^{3/2}\!\left(\frac d{\beta\eta}\right)
 \sqrt{\left\lceil\frac{\log(1/\beta)}d\right\rceil}
 \right].
-\tag{9}
+\qquad\text{(9)}
 ```
 
 
@@ -128,7 +128,7 @@ G_F=O\!\left[
 \frac{(da_V+d^{7/2})\sqrt r}{\eta}
 \mathrm{polylog}\!\left(\frac d{\beta\eta}\right)
 \right],
-\tag{10}
+\qquad\text{(10)}
 ```
 
 
@@ -143,7 +143,7 @@ For a known system projector $`P`$, amplitude estimation [2, Theorem 12] estimat
 
 ```math
 \tau=\langle\Psi|(P\otimes I_E)|\Psi\rangle
-\tag{11}
+\qquad\text{(11)}
 ```
 
 
@@ -152,7 +152,7 @@ with error at most
 
 ```math
 \frac{2\pi\sqrt{\tau(1-\tau)}}M+\frac{\pi^2}{M^2}
-\tag{12}
+\qquad\text{(12)}
 ```
 
 
@@ -166,7 +166,7 @@ No controlled preparation is hidden here. A controlled phase about $`|\Psi\rangl
 \bigl(|0\rangle\langle0|_C\otimes I+
 |1\rangle\langle1|_C\otimes S_0\bigr)
 (I_C\otimes U^\dagger),
-\tag{13}
+\qquad\text{(13)}
 ```
 
 
@@ -180,7 +180,7 @@ For a valid lower bound $`\tau\ge\tau_0>0`$, fixed-point amplitude amplification
 ```math
 |\phi_P\rangle=
 \frac{(P\otimes I_E)|\Psi\rangle}{\sqrt\tau}
-\tag{14}
+\qquad\text{(14)}
 ```
 
 
@@ -189,7 +189,7 @@ using
 
 ```math
 O\!\left(\tau_0^{-1/2}\log(1/\zeta)\right)
-\tag{15}
+\qquad\text{(15)}
 ```
 
 
@@ -200,7 +200,7 @@ For an explicit conversion, target failure amplitude at most $`\zeta/4`$, and ch
 
 ```math
 \frac{\log(8/\zeta)}{\sqrt{\tau_0}}.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 
@@ -214,7 +214,7 @@ Any sequence of arbitrary phase rotations about $`|\Psi\rangle`$ and range$`(P\o
 ```math
 |\psi_{\rm amp}\rangle
 =\bigl((uP+v(I-P))\otimes I_E\bigr)|\Psi\rangle
-\tag{17}
+\qquad\text{(17)}
 ```
 
 
@@ -231,7 +231,7 @@ Fix $`c=1/100`$, $`0<h<1/100`$, and
 
 ```math
 R=P\rho P,\qquad \tau=\mathrm{Tr}R.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 
@@ -247,7 +247,7 @@ A procedure using $`\widetilde O(dr/\sqrt h)`$ original preparation queries eith
 &S=PSP,\quad S\succeq0,\quad \mathrm{rank}S\le r,\quad
 \|S-R\|_F\le c\sqrt{\frac{\tau h}r},
 \end{split}
-\tag{19}
+\qquad\text{(19)}
 ```
 
 
@@ -258,7 +258,7 @@ except with its assigned failure probability. The construction includes finite-a
 
 ```math
 M=\left\lceil C_A\sqrt{r/h}\right\rceil
-\tag{20}
+\qquad\text{(20)}
 ```
 
 
@@ -268,7 +268,7 @@ for sufficiently large universal $`C_A`$, and amplify confidence. On success,
 ```math
 |\widehat\tau-\tau|
 \le\frac c{16}\left(\sqrt{\frac{\tau h}r}+\frac hr\right).
-\tag{21}
+\qquad\text{(21)}
 ```
 
 
@@ -277,7 +277,7 @@ Stop when $`\widehat\tau\le2h`$. Equation (21) implies a stop has $`\tau\le3h`$.
 
 ```math
 0.9975\tau\le\widehat\tau\le1.0025\tau.
-\tag{22}
+\qquad\text{(22)}
 ```
 
 
@@ -288,7 +288,7 @@ Set
 \tau_0=\widehat\tau/2,\qquad
 \eta=\frac c{100}\sqrt{\frac h{r\widehat\tau}},\qquad
 \zeta=\eta/100.
-\tag{23}
+\qquad\text{(23)}
 ```
 
 
@@ -298,7 +298,7 @@ The value $`\tau_0`$ is a valid constant-factor lower bound. Construct $`V_P`$ b
 ```math
 \|\sigma_P-R/\tau\|_F
 \le\|\sigma_P-R/\tau\|_1\le2\zeta.
-\tag{24}
+\qquad\text{(24)}
 ```
 
 
@@ -310,7 +310,7 @@ For a Hermitian matrix $`C`$, this truncation is a nearest PSD rank-at-most-$`r`
 ```math
 \|T-R/\tau\|_F
 \le2(\eta+2\zeta+\eta)\le5\eta.
-\tag{25}
+\qquad\text{(25)}
 ```
 
 
@@ -321,7 +321,7 @@ Set $`S=\widehat\tau T`$. Since $`\|R/\tau\|_F\le1`$,
 \|S-R\|_F
 \le5\widehat\tau\eta+|\widehat\tau-\tau|
 \le c\sqrt{\tau h/r}.
-\tag{26}
+\qquad\text{(26)}
 ```
 
 
@@ -333,7 +333,7 @@ The Frobenius primitive uses
 ```math
 \widetilde O(d\sqrt r/\eta)
 =\widetilde O\!\left(dr\sqrt{\widehat\tau/h}\right)
-\tag{27}
+\qquad\text{(27)}
 ```
 
 
@@ -349,7 +349,7 @@ Set
 ```math
 L=\left\lceil8\log_2(8/\epsilon)\right\rceil,\qquad
 h=\frac{\epsilon^2}{1000L}.
-\tag{28}
+\qquad\text{(28)}
 ```
 
 
@@ -358,7 +358,7 @@ Allow at most $`L+1`$ residual-estimation calls. Assign failure probability
 
 ```math
 \beta=\frac{\delta}{4(L+1)}
-\tag{29}
+\qquad\text{(29)}
 ```
 
 
@@ -369,7 +369,7 @@ Start with $`P_1=I`$. In round $`t`$, apply Lemma 3 to $`P_t\rho P_t`$. If it re
 
 ```math
 s_i\ge\theta_t:=\frac{\widehat\tau_t}{4r}.
-\tag{30}
+\qquad\text{(30)}
 ```
 
 
@@ -382,7 +382,7 @@ At termination define
 H=\sum_tH_t,\qquad
 S_{\rm out}=\sum_{i\text{ retained}}s_i|v_i\rangle\langle v_i|,
 \qquad \sigma=S_{\rm out}/\mathrm{Tr}S_{\rm out}.
-\tag{31}
+\qquad\text{(31)}
 ```
 
 
@@ -398,7 +398,7 @@ On (19), $`1\le\mathrm{rank}H_t\le r`$,
 ```math
 \mathrm{Tr}(H_t\rho)\ge\tau_t/2,\qquad
 \tau_{t+1}\le\tau_t/2,
-\tag{32}
+\qquad\text{(32)}
 ```
 
 
@@ -407,7 +407,7 @@ and each retained eigenvalue satisfies
 
 ```math
 s_i\ge\tau_t/(5r).
-\tag{33}
+\qquad\text{(33)}
 ```
 
 
@@ -416,7 +416,7 @@ s_i\ge\tau_t/(5r).
 
 ```math
 |\mathrm{Tr}(S-R)|\le\sqrt{2r}\,e.
-\tag{34}
+\qquad\text{(34)}
 ```
 
 
@@ -430,7 +430,7 @@ There are at most $`r`$ positive eigenvalues of $`S`$. The total weight excluded
 &\ge\tau-(\sqrt2+1)\sqrt r\,e-\widehat\tau/4\\
 &\ge\tau/2.
 \end{split}
-\tag{35}
+\qquad\text{(35)}
 ```
 
 
@@ -445,7 +445,7 @@ For a positive diagonal $`S=\mathrm{diag}(s_i)`$, define
 g_S(D)=\mathrm{Tr}[D\mathcal J_S^{-1}(D)]
 =\sum_{i,j}\frac{2|D_{ij}|^2}{s_i+s_j},\qquad
 \mathcal J_S(D)=\frac{SD+DS}{2}.
-\tag{36}
+\qquad\text{(36)}
 ```
 
 
@@ -458,7 +458,7 @@ In the recorded retained basis, put $`X=H\rho H`$ and $`S=S_{\rm out}`$. Then
 
 ```math
 g_S(X-S)\le10c^2hL.
-\tag{37}
+\qquad\text{(37)}
 ```
 
 
@@ -467,7 +467,7 @@ g_S(X-S)\le10c^2hL.
 
 ```math
 \frac2{s_i+s_j}\le\frac{10r}{\tau_t}.
-\tag{38}
+\qquad\text{(38)}
 ```
 
 
@@ -480,7 +480,7 @@ Consequently,
 g_S(X-S)
 \le\sum_t\frac{10r}{\tau_t}\|R_t-S_t\|_F^2
 \le10c^2hL.
-\tag{39}
+\qquad\text{(39)}
 ```
 
 
@@ -497,7 +497,7 @@ For PSD $`X`$, positive $`S`$ on the same space, and $`p=\mathrm{Tr}X>0,q=\mathr
 \chi_B^2(X/p\|S/q)
 =\frac q{p^2}
 \left[g_S(X-S)-\frac{(p-q)^2}{q}\right].
-\tag{40}
+\qquad\text{(40)}
 ```
 
 
@@ -506,7 +506,7 @@ Also,
 
 ```math
 (p-q)^2\le q\,g_S(X-S).
-\tag{41}
+\qquad\text{(41)}
 ```
 
 
@@ -517,7 +517,7 @@ Also,
 \langle D,S\rangle_S=\mathrm{Tr}D,\qquad
 g_S(S)=q,\qquad
 \mathcal J_{S/q}^{-1}=q\mathcal J_S^{-1}.
-\tag{42}
+\qquad\text{(42)}
 ```
 
 
@@ -528,7 +528,7 @@ Here $`p\ge1-3h\ge1/2`$. Put $`D=g_S(X-S)`$. Equations (37) and (28) give $`D\le
 
 ```math
 \sqrt q\le\frac{\sqrt D+\sqrt{D+4p}}2,
-\tag{43}
+\qquad\text{(43)}
 ```
 
 
@@ -538,7 +538,7 @@ so $`q\le2`$, and
 ```math
 D_B(X/p,S/q)^2\le\chi_B^2(X/p\|S/q)
 \le8D\le80c^2hL.
-\tag{44}
+\qquad\text{(44)}
 ```
 
 
@@ -548,7 +548,7 @@ The normalized projected purification $`(H\otimes I)|\Psi\rangle/\sqrt p`$ has o
 ```math
 D_B(\rho,X/p)^2
 \le2(1-\sqrt p)\le2(1-p)\le6h.
-\tag{45}
+\qquad\text{(45)}
 ```
 
 
@@ -559,7 +559,7 @@ The triangle inequality, (28), and $`c=1/100`$ give
 D_B(\rho,\sigma)
 \le\sqrt{6h}+\sqrt{80c^2hL}
 <\epsilon/8.
-\tag{46}
+\qquad\text{(46)}
 ```
 
 
@@ -576,7 +576,7 @@ Let
 \Lambda=\log\!\left(
 \frac{Cdr(L+1)^2}{\epsilon\delta}
 \right)
-\tag{47}
+\qquad\text{(47)}
 ```
 
 
@@ -595,7 +595,7 @@ Q={}&O\!\left[
 \log\frac{L+1}{\delta}
 \right].
 \end{split}
-\tag{48}
+\qquad\text{(48)}
 ```
 
 
@@ -612,7 +612,7 @@ Work in the current coordinate frame: apply the running basis inverse after $`U`
 \widetilde O\!\left[
 \widehat\tau^{-1/2}(G_U+a+d^2)
 \right].
-\tag{49}
+\qquad\text{(49)}
 ```
 
 
@@ -640,7 +640,7 @@ A constructive procedure is maximal-pivot complex Jacobi diagonalization. Diagon
 ```math
 E_{\rm off,new}
 \le\left(1-\frac2{k(k-1)}\right)E_{\rm off}.
-\tag{50}
+\qquad\text{(50)}
 ```
 
 
@@ -675,7 +675,7 @@ Let $`B_0`$ have columns $`\sqrt{s_i/q}\,v_i`$, so $`\sigma=B_0B_0^\dagger`$ and
 ```math
 \|\widetilde B-B_0\|_F\le\kappa,\qquad
 \kappa=\epsilon/8.
-\tag{51}
+\qquad\text{(51)}
 ```
 
 
@@ -686,7 +686,7 @@ Entrywise precision $`O(\kappa/\sqrt{dk})`$, where $`k`$ is the number of retain
 \widehat\rho=
 \frac{\widetilde B\widetilde B^\dagger}
 {\mathrm{Tr}(\widetilde B\widetilde B^\dagger)}.
-\tag{52}
+\qquad\text{(52)}
 ```
 
 
@@ -696,7 +696,7 @@ This is exactly PSD and trace one when represented by its rational numerator and
 ```math
 \left\|\frac{\widetilde B}{\|\widetilde B\|_F}-B_0\right\|_F
 \le2\kappa,
-\tag{53}
+\qquad\text{(53)}
 ```
 
 
@@ -719,7 +719,7 @@ Published [1, Theorem 9.3] states that, for $`0<\xi\le1/128`$, trace-norm accura
 
 ```math
 \|\rho-\widehat\rho\|_1\le2D_B(\rho,\widehat\rho),
-\tag{54}
+\qquad\text{(54)}
 ```
 
 

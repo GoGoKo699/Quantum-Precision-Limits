@@ -32,7 +32,7 @@ A=\frac{768p^{3/2}b_L}{\sqrt\nu\,j^{3/2}}+
 \quad
 0<\gamma\le\min\{\gamma_0,\epsilon/(2A)\},
 \quad \zeta\le\gamma/(8\alpha).
-\tag{1}
+\qquad\text{(1)}
 ```
 
 
@@ -41,7 +41,7 @@ Choose gamma and zeta dyadic with only a constant-factor reduction from these bo
 
 ```math
 d_B(K_{\rm true},K_{\rm pre})\le\alpha\zeta\le\gamma/8.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 
@@ -57,7 +57,7 @@ Set
 ```math
 \lambda=\frac{\gamma^2}{64m},\qquad
 S=K_{\rm pre}+\lambda I_m.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 
@@ -75,7 +75,7 @@ and therefore
 
 ```math
 d_B(K_{\rm true},S)\le\gamma/4.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 
@@ -89,7 +89,7 @@ Minimize
 ```math
 F(K,Z)=\mathrm{Tr}K+\mathrm{Tr}S
 -2\mathrm{Re}\mathrm{Tr}Z
-\tag{5}
+\qquad\text{(5)}
 ```
 
 
@@ -102,7 +102,7 @@ over complex rational matrices K=K† and Z, subject to
 \quad K_{00}\succeq\frac\nu2I_r,
 \quad\mathrm{Re}\mathrm{Tr}K_{0i}=0,
 \quad\sum_i\mathrm{Tr}K_{ii}\le2L^2.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 
@@ -119,7 +119,7 @@ under the block constraint. Consequently **any exactly feasible rational pair** 
 
 ```math
 F(K,Z)\le\gamma^2/4
-\tag{7}
+\qquad\text{(7)}
 ```
 
 
@@ -128,7 +128,7 @@ is an acceptable fit certificate. It directly implies d_B(K,S)<=gamma/2. Combine
 
 ```math
 d_B(K_{\rm true},K)\le3\gamma/4\le\gamma.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 
@@ -142,7 +142,7 @@ Let
 ```math
 K_c=\mathrm{diag}\left(\frac1rI_r,
 \frac{L^2}{pr}I_{pr}\right),\qquad Z_c=0.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 
@@ -153,7 +153,7 @@ The case L=0 is excluded by identifiability: for every direction, the SLD identi
 
 ```math
 \mu_{\rm fit}=\min\left\{\lambda,\frac1{2r},\frac{L^2}{pr}\right\}.
-\tag{10}
+\qquad\text{(10)}
 ```
 
 
@@ -165,7 +165,7 @@ The feasible set is bounded: Tr K<=T:=1+2L², while block positivity gives
 ```math
 \|Z\|_F\le\sqrt{\mathrm{Tr}K\mathrm{Tr}S}
 \le\sqrt{T\mathrm{Tr}S}.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 
@@ -188,7 +188,7 @@ Let Kfit be an accepted rational Gram. Exact pivoted LDL factorization gives
 
 ```math
 K_{\rm fit}=R^\dagger D R,
-\tag{12}
+\qquad\text{(12)}
 ```
 
 
@@ -199,7 +199,7 @@ Split R into q-by-r blocks R0,R1,...,Rp. A conceptual orthonormal-space factor i
 
 ```math
 \Psi=\sqrt D R_0,\qquad\Phi_i=\sqrt D R_i.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 
@@ -216,7 +216,7 @@ Replace an estimator by its action x_i=X_i Psi. Because Psi has full column rank
 
 ```math
 \Psi^\dagger x=x^\dagger\Psi.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 
@@ -226,7 +226,7 @@ Necessity is immediate. For sufficiency, with Psi^+=(Psi†Psi)^-1Psi†, set
 ```math
 X=x\Psi^++(x\Psi^+)^\dagger
 -(\Psi^+)^\dagger(\Psi^\dagger x)\Psi^+.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 
@@ -244,7 +244,7 @@ R_0^\dagger D B_i\text{ is Hermitian},\qquad
 
 ```math
 2\mathrm{Re}\mathrm{Tr}(R_j^\dagger D B_i)=\delta_{ij}.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 
@@ -253,7 +253,7 @@ Covariance is
 
 ```math
 Z_{ij}=\mathrm{Tr}B_i^\dagger D B_j.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 
@@ -262,7 +262,7 @@ Let N=qr, y_i=vec(B_i) using column-major vectorization, Y=[y_1,...,y_p], and
 
 ```math
 Q=I_r\otimes D^{-1}\succ0.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 
@@ -279,7 +279,7 @@ The fitted Holevo value is exactly
 \text{subject to}&A_{\rm eq}y=b,\quad C\in\mathbb S^p,\\
 &M(C,Y):=\begin{pmatrix}C&Y^\dagger\\Y&Q\end{pmatrix}\succeq0.
 \end{array}
-\tag{19}
+\qquad\text{(19)}
 ```
 
 
@@ -292,7 +292,7 @@ Solve the rational equality-constrained positive quadratic problem
 
 ```math
 \min_{A_{\rm eq}y=b}\mathrm{Tr}Y^\dagger Q^{-1}Y.
-\tag{20}
+\qquad\text{(20)}
 ```
 
 
@@ -310,7 +310,7 @@ Its value equals Tr Jhat^-1, and is at most 8p/j on the tomography success event
 
 ```math
 C_0=(\mathrm{Tr}Z_0+1)I_p.
-\tag{21}
+\qquad\text{(21)}
 ```
 
 
@@ -321,7 +321,7 @@ Then C0-Z0>=I_p, so M(C0,Y0)>0. An explicit positive lower bound is
 \mu_H\ge
 \frac{\min\{1,\lambda_{\min}(Q)\}}
 {(1+\|Q^{-1}Y_0\|_{\rm op})^2}.
-\tag{22}
+\qquad\text{(22)}
 ```
 
 
@@ -333,7 +333,7 @@ Add the harmless objective sublevel Tr C<=U, with U=2Tr C0+2. It contains an opt
 ```math
 \|C\|_F\le U,\qquad
 \|Y\|_F^2\le U\lambda_{\max}(Q).
-\tag{23}
+\qquad\text{(23)}
 ```
 
 
@@ -346,7 +346,7 @@ Use real vectorization vec_R(Y) that stacks all real entries followed by all ima
 
 ```math
 T=\begin{pmatrix}T_{00}&B^\dagger\\B&T_{11}\end{pmatrix}\succeq0
-\tag{24}
+\qquad\text{(24)}
 ```
 
 
@@ -356,7 +356,7 @@ satisfying
 ```math
 \mathrm{Re}T_{00}=I_p,
 \qquad A_{\rm eq}^T\mu+2\mathrm{vec}_{\mathbb R}(B)=0.
-\tag{25}
+\qquad\text{(25)}
 ```
 
 
@@ -365,7 +365,7 @@ Its lower value is
 
 ```math
 \ell=\mu^Tb-\mathrm{Tr}(T_{11}Q).
-\tag{26}
+\qquad\text{(26)}
 ```
 
 
@@ -375,7 +375,7 @@ For any primal feasible C,Y,
 ```math
 \mathrm{Tr}C-\ell
 =\mathrm{Tr}[T M(C,Y)]\ge0.
-\tag{27}
+\qquad\text{(27)}
 ```
 
 
@@ -386,7 +386,7 @@ A certified fitted-model interval is obtained by accepting rational primal and d
 
 ```math
 [\ell,u],\qquad u=\mathrm{Tr}C.
-\tag{28}
+\qquad\text{(28)}
 ```
 
 
@@ -401,7 +401,7 @@ Finite bounded search regions can also be supplied to the dual. For any dual poi
 
 ```math
 \mathrm{Tr}T\le(\mathrm{Tr}C_0-\ell_0)/\mu_H.
-\tag{29}
+\qquad\text{(29)}
 ```
 
 

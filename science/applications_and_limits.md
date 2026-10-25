@@ -28,7 +28,7 @@ Let $`V`$ be a circuit of local Z rotations and two-qubit XX and ZZ rotations. E
 ```math
 \sigma=\tfrac34|\psi\rangle\langle\psi|
        +\tfrac14P|\psi\rangle\langle\psi|P
-\tag{1}
+\qquad\text{(1)}
 ```
 
 
@@ -41,7 +41,7 @@ Encode two local field quadratures on qubit 1:
 G_1=X_1/2,\qquad G_2=Y_1/2,\qquad
 \sigma_\theta=e^{-i\theta_2G_2}e^{-i\theta_1G_1}
 \sigma e^{i\theta_1G_1}e^{i\theta_2G_2}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 
@@ -75,7 +75,7 @@ Prepare a three-valued derivative label with amplitudes proportional to $`(1,1/2
 ```math
 |\Omega\rangle=\frac1\alpha\sum_{i=0}^2\sum_{a=0}^1
  |i,a\rangle v_{ia},\qquad \alpha=\sqrt{3/2}.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 
@@ -200,7 +200,7 @@ At the zero operating point, the exact values are
 ```math
 J=I_2,\qquad
 C_H(I_2)=\frac{4}{1+\sqrt{1-c^2}}.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 
@@ -300,7 +300,7 @@ Whenever $`e_u<1`$ and $`e_l<1`$,
 ```math
 (1-\delta)(1-e_l)^2 C
 \ \le C_H(\rho,I_p)\ \le\overline C.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 

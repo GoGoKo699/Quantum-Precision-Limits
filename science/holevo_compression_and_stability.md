@@ -12,7 +12,7 @@ All matrix norms below are Schatten norms unless an operator norm is specified. 
 ```math
 d_B(A,B)^2=\mathrm{Tr}A+\mathrm{Tr}B
 -2\mathrm{Tr}\sqrt{\sqrt A B\sqrt A}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 
@@ -25,7 +25,7 @@ At a fixed parameter point, let
 \rho=\Psi\Psi^\dagger,\qquad
 D_i=\Phi_i\Psi^\dagger+\Psi\Phi_i^\dagger,
 \quad i=1,\ldots,p,
-\tag{2}
+\qquad\text{(2)}
 ```
 
 
@@ -35,7 +35,7 @@ where Psi and Phi_i have D rows and r columns, with D the physical Hilbert-space
 ```math
 \mathrm{Tr}\Psi^\dagger\Psi=1,\qquad
 \mathrm{Re}\mathrm{Tr}\Psi^\dagger\Phi_i=0.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 
@@ -46,7 +46,7 @@ These conditions make rho normalized and D_i traceless. Any such tangent is loca
 V=[\Psi,\Phi_1,\ldots,\Phi_p],\quad
 m=r(p+1),\quad K=V^\dagger V,
 \quad\sum_i\|\Phi_i\|_F^2\le L^2.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 
@@ -58,7 +58,7 @@ For Hermitian estimators X_i, impose
 ```math
 \mathrm{Tr}\rho X_i=0,\qquad
 \mathrm{Tr}D_jX_i=\delta_{ij}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 
@@ -68,7 +68,7 @@ Their complex covariance is Z_ij=Tr rho X_i X_j. With a real positive semidefini
 ```math
 h_W(Z)=\mathrm{Tr}(W\mathrm{Re}Z)
 +\|\sqrt W\mathrm{Im}Z\sqrt W\|_1.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 
@@ -82,7 +82,7 @@ If Q>=0, then
 ```math
 \|\mathrm{Im}(\sqrt WQ\sqrt W)\|_1
 \le\mathrm{Tr}(W\mathrm{Re}Q).
-\tag{7}
+\qquad\text{(7)}
 ```
 
 
@@ -100,7 +100,7 @@ For W=I, one also has the exact epigraph identity
 
 ```math
 h_I(Z)=\min\{\mathrm{Tr}C:C\in\mathbb S^p,\ C\succeq Z\}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 
@@ -116,7 +116,7 @@ For the upper direction take C=Re Z+sqrt(-(Im Z)²), which is real symmetric. It
 ```math
 Z(X)=Z(Y)+Q,
 \quad Q_{ij}=\mathrm{Tr}\rho X_i(I-P)X_j.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 
@@ -131,7 +131,7 @@ Let L_i be the canonical SLDs satisfying (rho L_i+L_i rho)/2=D_i, with their ker
 
 ```math
 C_H(I_p)\le2\mathrm{Tr}J^{-1}\le2p/j.
-\tag{10}
+\qquad\text{(10)}
 ```
 
 
@@ -148,7 +148,7 @@ relative to supp(rho) and its complement yields
 
 ```math
 \|X_i\|_F^2\le\frac2\nu\mathrm{Tr}\rho X_i^2.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 
@@ -163,7 +163,7 @@ This supplies a bounded optimal representative. It also proves attainment: a min
 \delta_D=\left(\sum_i\|D_i-\widehat D_i\|_F^2\right)^{1/2},
 \quad C_{\max}=\frac{2p}{j_*},
 \quad B=2\sqrt{\frac p{\nu_*j_*}}.
-\tag{12}
+\qquad\text{(12)}
 ```
 
 
@@ -173,7 +173,7 @@ If B delta_D<1, then
 ```math
 \widehat C_H\le
 \frac{C_H+2B^2\delta_\rho}{(1-B\delta_D)^2}.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 
@@ -183,7 +183,7 @@ The same statement holds with the models exchanged. In particular, if B delta_D<
 ```math
 |\widehat C_H-C_H|
 \le6C_{\max}B\delta_D+8B^2\delta_\rho.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 
@@ -228,7 +228,7 @@ If their derivative-factor norms are bounded by L and Lhat, respectively, produc
 \delta_\rho\le2\delta_\Psi,
 \qquad
 \delta_D\le2\delta_\Phi+(L+\widehat L)\delta_\Psi.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 
@@ -240,7 +240,7 @@ These estimates use Frobenius product inequalities, not ambient-dimension factor
 ```math
 \delta_\rho\le\nu/(2p),\qquad
 \delta_D\le\sqrt{\nu j/(8p)},
-\tag{16}
+\qquad\text{(16)}
 ```
 
 
@@ -260,7 +260,7 @@ For computation, fit the learned Gram to the relaxed physical set
 \mathrm{Tr}K_{00}=1,\quad K_{00}\succeq\frac\nu2 I_r,
 \quad\mathrm{Re}\mathrm{Tr}K_{0i}=0,
 \quad\sum_i\mathrm{Tr}K_{ii}\le2L^2\right\}.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 
@@ -274,7 +274,7 @@ b_L=2+(1+\sqrt2)L,
 \qquad
 A=\frac{768p^{3/2}b_L}{\sqrt\nu\,j^{3/2}}
 +\frac{1024p}{\nu j},
-\tag{18}
+\qquad\text{(18)}
 ```
 
 
@@ -285,7 +285,7 @@ and
 \gamma_0=
 \min\left\{\frac\nu{4p},
 \frac{\sqrt{\nu j}}{16\sqrt p\,b_L}\right\}.
-\tag{19}
+\qquad\text{(19)}
 ```
 
 
@@ -294,7 +294,7 @@ and
 
 ```math
 |C_H(\widehat K,I_p)-C_H(K,I_p)|\le A\gamma.
-\tag{20}
+\qquad\text{(20)}
 ```
 
 
@@ -310,7 +310,7 @@ Assume a controlled circuit and its inverse prepare a coherent joint factor arra
 ```math
 \omega=(K^T/\alpha^2)\oplus
 \left(1-\mathrm{Tr}K/\alpha^2\right),
-\tag{21}
+\qquad\text{(21)}
 ```
 
 
@@ -322,7 +322,7 @@ For a target error epsilon, choose a positive dyadic gamma, within a constant fa
 ```math
 \min\{\gamma_0,\epsilon/(2A)\},
 \qquad\zeta\le\gamma/(8\alpha).
-\tag{22}
+\qquad\text{(22)}
 ```
 
 
@@ -333,7 +333,7 @@ Let [ell,u] be a certified classical interval for C_H(Khat,I_p), with u-ell<=eps
 
 ```math
 [\ell-A\gamma,\ u+A\gamma]
-\tag{23}
+\qquad\text{(23)}
 ```
 
 
@@ -345,7 +345,7 @@ Using the coherent Bures learner, the number of joint-preparation or inverse cal
 ```math
 \widetilde O\!\left((m+1)^2\alpha
 \max\left\{\frac A\epsilon,\frac1{\gamma_0}\right\}\right).
-\tag{24}
+\qquad\text{(24)}
 ```
 
 
@@ -367,7 +367,7 @@ a=\sqrt{w_{\max}/w_{\min}}\,B\delta_D,
 ```math
 \widehat C_H(W)\le
 \frac{C_H(W)+2w_{\max}B^2\delta_\rho}{(1-a)^2}.
-\tag{25}
+\qquad\text{(25)}
 ```
 
 
