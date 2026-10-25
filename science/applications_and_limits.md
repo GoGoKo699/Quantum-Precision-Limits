@@ -1,12 +1,12 @@
 # Applications, exact examples, and limits
 
-Certified Holevo-bound evaluation supplies an attainable precision benchmark for a specified multiparameter quantum model. This document develops the useful task, input circuits, matched baselines, and robustness limits. The Bures-tomography theorem and the general factor-stability theorem are proved separately. Results derived here are distinguished from the established metrology and tomography tools cited below.
+Certified Holevo-bound evaluation supplies the local precision benchmark for a specified multiparameter quantum model. This document develops the useful task, input circuits, matched baselines, and robustness limits. The Bures-tomography theorem and the general factor-stability theorem are proved separately. Results derived here are distinguished from the established metrology and tomography tools cited below.
 
 ## 1. The output is a precision benchmark for a known circuit model
 
-For a smooth local model $`\rho_\theta`$, a positive weight matrix $`W`$, and an operating point $`\theta_0`$, the target is a certified interval for the Holevo Cramér–Rao value $`C_H(W)`$. Under the usual regular local asymptotic conditions, this is the attainable weighted covariance benchmark when collective measurements on many identically prepared probes are allowed. It generally differs from the symmetric-logarithmic-derivative benchmark $`\operatorname{Tr}(WJ^{-1})`$. The operational meaning and restrictions are reviewed in [1], and finite-dimensional classical optimization is established in [2,3].
+For a smooth local model $`\rho_\theta`$, a positive weight matrix $`W`$, and an operating point $`\theta_0`$, the target is a certified interval for the Holevo Cramér–Rao value $`C_H(W)`$. Under the usual regular local asymptotic conditions, this is the attainable weighted covariance benchmark when collective measurements on many identically prepared probes are allowed. It generally differs from the symmetric-logarithmic-derivative benchmark $`\mathrm{Tr}(WJ^{-1})`$. The operational meaning and restrictions are reviewed in [1], and finite-dimensional classical optimization is established in [2,3].
 
-The algorithm evaluates this benchmark for a **specified digital model**. It can compare proposed probe preparations, known preparation errors, control settings, or sensing geometries. It does not by itself produce the optimal measurement, establish a finite-copy error bar for an experiment, or supply coherent access to an uncontrolled laboratory environment.
+The algorithm evaluates this benchmark for a **specified digital model**. It can compare proposed probe preparations, known preparation errors, control settings, or sensing geometries. The low-rank input promises alone do not establish an attainment theorem for every boundary model; that interpretation requires an applicable estimation-theory result. The algorithm does not by itself produce the optimal measurement, establish a finite-copy error bar for an experiment, or supply coherent access to an uncontrolled laboratory environment.
 
 The input contains a short circuit preparing a purification of a rank-r probe and a coherent implementation of its p local factor derivatives. For unitary sensing, these derivatives are $`\Phi_i=-iG_i\Psi`$, where $`\rho=\Psi\Psi^\dagger`$. The useful label dimension is $`m=r(p+1)`$. All circuit gates, inverses, derivative normalizations, controlled operations, and the small classical optimization are charged. No amplitude loading from an exponentially long classical vector is assumed.
 
@@ -113,7 +113,7 @@ whereas
 
 
 ```math
-2.233360231\le\operatorname{Tr}(J^{-1})\le2.233360232.
+2.233360231\le\mathrm{Tr}(J^{-1})\le2.233360232.
 ```
 
 
@@ -184,7 +184,7 @@ For this Pauli-generator family, $`\alpha=\sqrt{3/2}`$, r and p are fixed, and t
 
 ## 4. Exact fixed-QFI family and the separate hardness statement
 
-Let $`\sigma`$ be any work-register state, O a Hermitian unitary, and $`c=\operatorname{Tr}(\sigma O)`$. Append a sensor qubit in $`|0\rangle`$, and use
+Let $`\sigma`$ be any work-register state, O a Hermitian unitary, and $`c=\mathrm{Tr}(\sigma O)`$. Append a sensor qubit in $`|0\rangle`$, and use
 
 
 ```math
@@ -212,13 +212,13 @@ In sensor blocks,
 
 
 ```math
-\rho=\operatorname{diag}(\sigma,0),\quad
+\rho=\mathrm{diag}(\sigma,0),\quad
 D_1=\begin{pmatrix}0&i\sigma/2\\-i\sigma/2&0\end{pmatrix},\quad
 D_2=\begin{pmatrix}0&\sigma O/2\\O\sigma/2&0\end{pmatrix}.
 ```
 
 
-Writing estimators as $`X_i=\left(\begin{smallmatrix}A_i&B_i^\dagger\\B_i&C_i\end{smallmatrix}\right)`$, remove $`A_i,C_i`$: the constraints do not involve them, and their covariance contribution is a positive Gram. Set $`x_i=B_i\sqrt\sigma`$, $`u_1=-i\sqrt\sigma`$, $`u_2=O\sqrt\sigma`$. The constraints are $`\operatorname{Re}\langle u_j,x_i\rangle=\delta_{ij}`$, while $`\|u_i\|=1`$ and $`\langle u_1,u_2\rangle=ic`$. The SLD information is therefore $`J=I_2`$.
+Writing estimators as $`X_i=\left(\begin{smallmatrix}A_i&B_i^\dagger\\B_i&C_i\end{smallmatrix}\right)`$, remove $`A_i,C_i`$: the constraints do not involve them, and their covariance contribution is a positive Gram. Set $`x_i=B_i\sqrt\sigma`$, $`u_1=-i\sqrt\sigma`$, $`u_2=O\sqrt\sigma`$. The constraints are $`\mathrm{Re}\langle u_j,x_i\rangle=\delta_{ij}`$, while $`\|u_i\|=1`$ and $`\langle u_1,u_2\rangle=ic`$. The SLD information is therefore $`J=I_2`$.
 
 Projection onto the complex span of $`u_1,u_2`$ only removes another positive covariance Gram. For $`|c|<1`$, write $`u_1=e_1`$, $`u_2=ice_1+se_2`$, $`s=\sqrt{1-c^2}`$, and $`y=c/(1+s)`$. The feasible pair
 
@@ -232,7 +232,7 @@ has $`\langle x_1,x_2\rangle=0`$ and objective $`2(1+y^2)=4/(1+s)`$. For a match
 
 
 ```math
-q_y=\|x_1\|^2+\|x_2\|^2+2y\operatorname{Im}\langle x_1,x_2\rangle.
+q_y=\|x_1\|^2+\|x_2\|^2+2y\mathrm{Im}\langle x_1,x_2\rangle.
 ```
 
 
@@ -255,7 +255,7 @@ This is a worst-case computational witness. It is not evidence that the four-qub
 
 ### Precision lower bounds with conditioning fixed
 
-Choose $`O=Z`$, $`\sigma_t=\operatorname{diag}(\cos^2t,\sin^2t)`$, with purification $`|\Psi_t\rangle=\cos t|00\rangle+\sin t|11\rangle`$. The sensing generators remain fixed. For $`t\in(0,\pi/4)`$,
+Choose $`O=Z`$, $`\sigma_t=\mathrm{diag}(\cos^2t,\sin^2t)`$, with purification $`|\Psi_t\rangle=\cos t|00\rangle+\sin t|11\rangle`$. The sensing generators remain fixed. For $`t\in(0,\pi/4)`$,
 
 
 ```math
@@ -308,7 +308,7 @@ This is a dimension-independent, two-sided certificate for the full noisy prepar
 
 ### Proof
 
-For a positive covariance Gram Z, let $`h(Z)=\operatorname{Tr}\operatorname{Re}Z+\|\operatorname{Im}Z\|_1`$. It is monotone under positive Gram additions, subadditive, satisfies $`\operatorname{Tr}Z\le h(Z)\le2\operatorname{Tr}Z`$, and obeys $`h(RZR^T)\le\|R\|^2h(Z)`$ for real R.
+For a positive covariance Gram Z, let $`h(Z)=\mathrm{Tr}\mathrm{Re}Z+\|\mathrm{Im}Z\|_1`$. It is monotone under positive Gram additions, subadditive, satisfies $`\mathrm{Tr}Z\le h(Z)\le2\mathrm{Tr}Z`$, and obeys $`h(RZR^T)\le\|R\|^2h(Z)`$ for real R.
 
 For the upper bound, take a retained-model optimal estimator X and set its kernel–kernel blocks to zero. Since the retained state is at least $`\kappa`$ on its support,
 
@@ -320,13 +320,13 @@ For the upper bound, take a retained-model optimal estimator X and set its kerne
 ```
 
 
-Write $`A(\omega)_{ij}=\operatorname{Tr}[X_i(-i[G_j,\omega])]`$. Then $`A(\sigma)=I`$ and $`\|A(\tau)\|\le2g\sqrt{2pC/\kappa}`$. Therefore $`\|A(\rho)-I\|\le e_u`$, so $`A(\rho)^{-1}X`$ repairs local unbiasedness. Centering afterward only removes a positive Gram. Subadditivity gives the pre-repair objective at most $`C(1-\delta+4\delta/\kappa)`$; the repair multiplies it by at most $`(1-e_u)^{-2}`$.
+Write $`A(\omega)_{ij}=\mathrm{Tr}[X_i(-i[G_j,\omega])]`$. Then $`A(\sigma)=I`$ and $`\|A(\tau)\|\le2g\sqrt{2pC/\kappa}`$. Therefore $`\|A(\rho)-I\|\le e_u`$, so $`A(\rho)^{-1}X`$ repairs local unbiasedness. Centering afterward only removes a positive Gram. Subadditivity gives the pre-repair objective at most $`C(1-\delta+4\delta/\kappa)`$; the repair multiplies it by at most $`(1-e_u)^{-2}`$.
 
 For the lower bound, take a full-model optimal estimator with value $`C_\rho`$. Weighted Cauchy–Schwarz gives
 
 
 ```math
-|\operatorname{Tr}[\tau(-i[X_i,G_j])]|\le2g\sqrt{\operatorname{Tr}(\tau X_i^2)},
+|\mathrm{Tr}[\tau(-i[X_i,G_j])]|\le2g\sqrt{\mathrm{Tr}(\tau X_i^2)},
 ```
 
 

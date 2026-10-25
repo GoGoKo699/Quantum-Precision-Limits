@@ -13,8 +13,8 @@ Let $`\mathcal H_S\cong\mathbb C^d`$ be a designated system register, with $`d\g
 
 ```math
 U|0^a\rangle=|\Psi\rangle_{SE},\qquad
-\rho=\operatorname{Tr}_E|\Psi\rangle\langle\Psi|,
-\qquad \operatorname{rank}\rho\le r\le d.
+\rho=\mathrm{Tr}_E|\Psi\rangle\langle\Psi|,
+\qquad \mathrm{rank}\rho\le r\le d.
 \tag{1}
 ```
 
@@ -31,7 +31,7 @@ D_B(\rho,\sigma)=\sqrt{2-2F(\rho,\sigma)}.
 ```
 
 
-For positive semidefinite, not necessarily normalized matrices, replace $`2`$ in (2) by $`\operatorname{Tr}\rho+\operatorname{Tr}\sigma`$.
+For positive semidefinite, not necessarily normalized matrices, replace $`2`$ in (2) by $`\mathrm{Tr}\rho+\mathrm{Tr}\sigma`$.
 
 ### Theorem 1 — Arbitrary-purifier Bures tomography
 
@@ -64,7 +64,7 @@ The ideal spectral output has rank at most
 ```
 
 
-A finite classical output can instead be an explicitly specified rational factor $`B`$, representing the exactly positive and normalized matrix $`BB^\dagger/\operatorname{Tr}(BB^\dagger)`$. It obeys the same rank bound. A dense matrix can be formed from that factor in polynomial time.
+A finite classical output can instead be an explicitly specified rational factor $`B`$, representing the exactly positive and normalized matrix $`BB^\dagger/\mathrm{Tr}(BB^\dagger)`$. It obeys the same rank bound. A dense matrix can be formed from that factor in polynomial time.
 
 If $`G_U`$ denotes the gate cost of implementing a query, a conservative gate bound is
 
@@ -81,7 +81,7 @@ This uses $`O(a)`$ clean work qubits for zero-state phases and includes explicit
 
 
 ```math
-O\!\left(a+d^2\operatorname{polylog}
+O\!\left(a+d^2\mathrm{polylog}
 \frac{dr}{\epsilon\delta}\right)
 \tag{7}
 ```
@@ -126,7 +126,7 @@ The additional two-qubit gate bound is
 ```math
 G_F=O\!\left[
 \frac{(da_V+d^{7/2})\sqrt r}{\eta}
-\operatorname{polylog}\!\left(\frac d{\beta\eta}\right)
+\mathrm{polylog}\!\left(\frac d{\beta\eta}\right)
 \right],
 \tag{10}
 ```
@@ -220,7 +220,7 @@ Any sequence of arbitrary phase rotations about $`|\Psi\rangle`$ and range$`(P\o
 
 for complex scalars $`u,v`$. Its reduced system state has rank at most $`r`$.
 
-**Proof.** Both phase operations preserve the span of $`(P\otimes I_E)|\Psi\rangle`$ and $`((I-P)\otimes I_E)|\Psi\rangle`$. If $`\Psi`$ is the matrix of purification amplitudes, the output amplitude matrix is $`(uP+v(I-P))\Psi`$, whose rank is at most $`\operatorname{rank}\Psi=\operatorname{rank}\rho`$. This remains true for rounded phase angles. Clean phase-implementation ancillas are uncomputed. $`\square`$
+**Proof.** Both phase operations preserve the span of $`(P\otimes I_E)|\Psi\rangle`$ and $`((I-P)\otimes I_E)|\Psi\rangle`$. If $`\Psi`$ is the matrix of purification amplitudes, the output amplitude matrix is $`(uP+v(I-P))\Psi`$, whose rank is at most $`\mathrm{rank}\Psi=\mathrm{rank}\rho`$. This remains true for rounded phase angles. Clean phase-implementation ancillas are uncomputed. $`\square`$
 
 This lemma concerns the ideal phase circuit, including finitely specified rounded phase angles. Arbitrary gate-synthesis errors can break exact rank. We do not apply a rank-$`r`$ theorem directly to that imperfect hardware output; Section 8 compares the complete compiled algorithm with the ideal algorithm by a global hybrid bound.
 
@@ -230,7 +230,7 @@ Fix $`c=1/100`$, $`0<h<1/100`$, and
 
 
 ```math
-R=P\rho P,\qquad \tau=\operatorname{Tr}R.
+R=P\rho P,\qquad \tau=\mathrm{Tr}R.
 \tag{18}
 ```
 
@@ -244,7 +244,7 @@ A procedure using $`\widetilde O(dr/\sqrt h)`$ original preparation queries eith
 \begin{split}
 &\tau\ge h,\qquad
 |\widehat\tau-\tau|\le\frac c4\sqrt{\frac{\tau h}r},\\
-&S=PSP,\quad S\succeq0,\quad \operatorname{rank}S\le r,\quad
+&S=PSP,\quad S\succeq0,\quad \mathrm{rank}S\le r,\quad
 \|S-R\|_F\le c\sqrt{\frac{\tau h}r},
 \end{split}
 \tag{19}
@@ -302,7 +302,7 @@ The value $`\tau_0`$ is a valid constant-factor lower bound. Construct $`V_P`$ b
 ```
 
 
-Apply the Frobenius primitive to $`\sigma_P`$ with accuracy $`\eta`$, and compress the Hermitian estimate to $`P`$. Compute a spectral representation $`W\operatorname{diag}(\lambda)W^\dagger`$ with additional Frobenius residual at most $`\eta`$. Here $`W`$ is an exactly specified product of system rotations acting inside range $`P`$; Section 8 supplies a gap-free finite-precision construction. Replace negative diagonal values by zero and retain at most the largest $`r`$ positive values. Call the resulting matrix $`T`$.
+Apply the Frobenius primitive to $`\sigma_P`$ with accuracy $`\eta`$, and compress the Hermitian estimate to $`P`$. Compute a spectral representation $`W\mathrm{diag}(\lambda)W^\dagger`$ with additional Frobenius residual at most $`\eta`$. Here $`W`$ is an exactly specified product of system rotations acting inside range $`P`$; Section 8 supplies a gap-free finite-precision construction. Replace negative diagonal values by zero and retain at most the largest $`r`$ positive values. Call the resulting matrix $`T`$.
 
 For a Hermitian matrix $`C`$, this truncation is a nearest PSD rank-at-most-$`r`$ matrix in Frobenius norm. Since $`R/\tau`$ belongs to that set,
 
@@ -381,7 +381,7 @@ At termination define
 ```math
 H=\sum_tH_t,\qquad
 S_{\rm out}=\sum_{i\text{ retained}}s_i|v_i\rangle\langle v_i|,
-\qquad \sigma=S_{\rm out}/\operatorname{Tr}S_{\rm out}.
+\qquad \sigma=S_{\rm out}/\mathrm{Tr}S_{\rm out}.
 \tag{31}
 ```
 
@@ -392,11 +392,11 @@ If no vector was retained, return an arbitrary fixed state. The initial mass is 
 
 ### Lemma 4 — Each continuing round removes at least half the mass
 
-On (19), $`1\le\operatorname{rank}H_t\le r`$,
+On (19), $`1\le\mathrm{rank}H_t\le r`$,
 
 
 ```math
-\operatorname{Tr}(H_t\rho)\ge\tau_t/2,\qquad
+\mathrm{Tr}(H_t\rho)\ge\tau_t/2,\qquad
 \tau_{t+1}\le\tau_t/2,
 \tag{32}
 ```
@@ -415,7 +415,7 @@ s_i\ge\tau_t/(5r).
 
 
 ```math
-|\operatorname{Tr}(S-R)|\le\sqrt{2r}\,e.
+|\mathrm{Tr}(S-R)|\le\sqrt{2r}\,e.
 \tag{34}
 ```
 
@@ -425,8 +425,8 @@ There are at most $`r`$ positive eigenvalues of $`S`$. The total weight excluded
 
 ```math
 \begin{split}
-\operatorname{Tr}(H_tR)
-&\ge\operatorname{Tr}(H_tS)-\sqrt r\,e\\
+\mathrm{Tr}(H_tR)
+&\ge\mathrm{Tr}(H_tS)-\sqrt r\,e\\
 &\ge\tau-(\sqrt2+1)\sqrt r\,e-\widehat\tau/4\\
 &\ge\tau/2.
 \end{split}
@@ -438,11 +438,11 @@ The last step uses $`\tau\ge h`$, $`e\le.01\sqrt{\tau h/r}`$, and (22). The lowe
 
 Mass halves at every continuing round, so there are at most $`\lceil\log_2(1/h)\rceil+1\le L`$ continuing rounds. The last inequality follows from (28) for $`0<\epsilon\le1/4`$. Thus the cap is safe. At STOP, the true discarded mass is at most $`3h`$.
 
-For a positive diagonal $`S=\operatorname{diag}(s_i)`$, define
+For a positive diagonal $`S=\mathrm{diag}(s_i)`$, define
 
 
 ```math
-g_S(D)=\operatorname{Tr}[D\mathcal J_S^{-1}(D)]
+g_S(D)=\mathrm{Tr}[D\mathcal J_S^{-1}(D)]
 =\sum_{i,j}\frac{2|D_{ij}|^2}{s_i+s_j},\qquad
 \mathcal J_S(D)=\frac{SD+DS}{2}.
 \tag{36}
@@ -490,7 +490,7 @@ No comparison of exact and approximate spectral projectors occurs, so no eigenga
 
 ### Lemma 6 — Exact normalization identity
 
-For PSD $`X`$, positive $`S`$ on the same space, and $`p=\operatorname{Tr}X>0,q=\operatorname{Tr}S>0`$,
+For PSD $`X`$, positive $`S`$ on the same space, and $`p=\mathrm{Tr}X>0,q=\mathrm{Tr}S>0`$,
 
 
 ```math
@@ -514,7 +514,7 @@ Also,
 
 
 ```math
-\langle D,S\rangle_S=\operatorname{Tr}D,\qquad
+\langle D,S\rangle_S=\mathrm{Tr}D,\qquad
 g_S(S)=q,\qquad
 \mathcal J_{S/q}^{-1}=q\mathcal J_S^{-1}.
 \tag{42}
@@ -632,7 +632,7 @@ Three different approximation issues must be kept separate.
 
 ### 8.1 Classical spectral computations without a gap
 
-The algorithm needs small residual $`\|C-W\operatorname{diag}(\lambda)W^\dagger\|_F`$, rather than individually accurate eigenvectors. Nearly degenerate eigenvalues therefore create no singular accuracy requirement.
+The algorithm needs small residual $`\|C-W\mathrm{diag}(\lambda)W^\dagger\|_F`$, rather than individually accurate eigenvectors. Nearly degenerate eigenvalues therefore create no singular accuracy requirement.
 
 A constructive procedure is maximal-pivot complex Jacobi diagonalization. Diagonalize a selected $`2\times2`$ Hermitian principal block by a two-level unitary. If $`E_{\rm off}`$ is the squared Frobenius norm of the off-diagonal entries, an exact step removes $`2|C_{ij}|^2`$. A maximal pivot in a $`k\times k`$ block gives
 
@@ -685,7 +685,7 @@ Entrywise precision $`O(\kappa/\sqrt{dk})`$, where $`k`$ is the number of retain
 ```math
 \widehat\rho=
 \frac{\widetilde B\widetilde B^\dagger}
-{\operatorname{Tr}(\widetilde B\widetilde B^\dagger)}.
+{\mathrm{Tr}(\widetilde B\widetilde B^\dagger)}.
 \tag{52}
 ```
 

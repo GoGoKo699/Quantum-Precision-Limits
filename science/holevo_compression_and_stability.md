@@ -10,8 +10,8 @@ All matrix norms below are Schatten norms unless an operator norm is specified. 
 
 
 ```math
-d_B(A,B)^2=\operatorname{Tr}A+\operatorname{Tr}B
--2\operatorname{Tr}\sqrt{\sqrt A B\sqrt A}.
+d_B(A,B)^2=\mathrm{Tr}A+\mathrm{Tr}B
+-2\mathrm{Tr}\sqrt{\sqrt A B\sqrt A}.
 \tag{1}
 ```
 
@@ -33,8 +33,8 @@ where Psi and Phi_i have D rows and r columns, with D the physical Hilbert-space
 
 
 ```math
-\operatorname{Tr}\Psi^\dagger\Psi=1,\qquad
-\operatorname{Re}\operatorname{Tr}\Psi^\dagger\Phi_i=0.
+\mathrm{Tr}\Psi^\dagger\Psi=1,\qquad
+\mathrm{Re}\mathrm{Tr}\Psi^\dagger\Phi_i=0.
 \tag{3}
 ```
 
@@ -56,8 +56,8 @@ For Hermitian estimators X_i, impose
 
 
 ```math
-\operatorname{Tr}\rho X_i=0,\qquad
-\operatorname{Tr}D_jX_i=\delta_{ij}.
+\mathrm{Tr}\rho X_i=0,\qquad
+\mathrm{Tr}D_jX_i=\delta_{ij}.
 \tag{5}
 ```
 
@@ -66,8 +66,8 @@ Their complex covariance is Z_ij=Tr rho X_i X_j. With a real positive semidefini
 
 
 ```math
-h_W(Z)=\operatorname{Tr}(W\operatorname{Re}Z)
-+\|\sqrt W\operatorname{Im}Z\sqrt W\|_1.
+h_W(Z)=\mathrm{Tr}(W\mathrm{Re}Z)
++\|\sqrt W\mathrm{Im}Z\sqrt W\|_1.
 \tag{6}
 ```
 
@@ -80,8 +80,8 @@ If Q>=0, then
 
 
 ```math
-\|\operatorname{Im}(\sqrt WQ\sqrt W)\|_1
-\le\operatorname{Tr}(W\operatorname{Re}Q).
+\|\mathrm{Im}(\sqrt WQ\sqrt W)\|_1
+\le\mathrm{Tr}(W\mathrm{Re}Q).
 \tag{7}
 ```
 
@@ -99,7 +99,7 @@ For W=I, one also has the exact epigraph identity
 
 
 ```math
-h_I(Z)=\min\{\operatorname{Tr}C:C\in\mathbb S^p,\ C\succeq Z\}.
+h_I(Z)=\min\{\mathrm{Tr}C:C\in\mathbb S^p,\ C\succeq Z\}.
 \tag{8}
 ```
 
@@ -115,7 +115,7 @@ For the upper direction take C=Re Z+sqrt(-(Im Z)²), which is real symmetric. It
 
 ```math
 Z(X)=Z(Y)+Q,
-\quad Q_{ij}=\operatorname{Tr}\rho X_i(I-P)X_j.
+\quad Q_{ij}=\mathrm{Tr}\rho X_i(I-P)X_j.
 \tag{9}
 ```
 
@@ -130,7 +130,7 @@ Let L_i be the canonical SLDs satisfying (rho L_i+L_i rho)/2=D_i, with their ker
 
 
 ```math
-C_H(I_p)\le2\operatorname{Tr}J^{-1}\le2p/j.
+C_H(I_p)\le2\mathrm{Tr}J^{-1}\le2p/j.
 \tag{10}
 ```
 
@@ -147,7 +147,7 @@ relative to supp(rho) and its complement yields
 
 
 ```math
-\|X_i\|_F^2\le\frac2\nu\operatorname{Tr}\rho X_i^2.
+\|X_i\|_F^2\le\frac2\nu\mathrm{Tr}\rho X_i^2.
 \tag{11}
 ```
 
@@ -257,9 +257,9 @@ For computation, fit the learned Gram to the relaxed physical set
 
 ```math
 \mathcal F=\left\{K\succeq0:
-\operatorname{Tr}K_{00}=1,\quad K_{00}\succeq\frac\nu2 I_r,
-\quad\operatorname{Re}\operatorname{Tr}K_{0i}=0,
-\quad\sum_i\operatorname{Tr}K_{ii}\le2L^2\right\}.
+\mathrm{Tr}K_{00}=1,\quad K_{00}\succeq\frac\nu2 I_r,
+\quad\mathrm{Re}\mathrm{Tr}K_{0i}=0,
+\quad\sum_i\mathrm{Tr}K_{ii}\le2L^2\right\}.
 \tag{17}
 ```
 
@@ -309,7 +309,7 @@ Assume a controlled circuit and its inverse prepare a coherent joint factor arra
 
 ```math
 \omega=(K^T/\alpha^2)\oplus
-\left(1-\operatorname{Tr}K/\alpha^2\right),
+\left(1-\mathrm{Tr}K/\alpha^2\right),
 \tag{21}
 ```
 
@@ -357,7 +357,7 @@ For a positive definite W with eigenvalues w_min,w_max, Theorem 2 becomes
 
 
 ```math
-C_{\max}=2\operatorname{Tr}W/j_*,\quad
+C_{\max}=2\mathrm{Tr}W/j_*,\quad
 B^2=2C_{\max}/(\nu_* w_{\min}),\quad
 a=\sqrt{w_{\max}/w_{\min}}\,B\delta_D,
 ```

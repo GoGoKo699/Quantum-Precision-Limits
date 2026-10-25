@@ -59,7 +59,7 @@ The half trace distance obeys $`\tfrac12\|\rho-\sigma\|_1\le D_B(\rho,\sigma)`$.
 For arbitrary positive semidefinite matrices, use the homogeneous extension
 
 ```math
-d_B(K,H)^2=\operatorname{Tr}K+\operatorname{Tr}H
+d_B(K,H)^2=\mathrm{Tr}K+\mathrm{Tr}H
  -2\|\sqrt K\sqrt H\|_1.
 ```
 
@@ -106,7 +106,7 @@ At an operating point, let $`\Psi,\Phi_i\in\mathbb C^{D\times r}`$ satisfy
 D_i=\Phi_i\Psi^\dagger+\Psi\Phi_i^\dagger,
 \qquad
 \|\Psi\|_F=1,\quad
-\operatorname{Re}\operatorname{Tr}(\Psi^\dagger\Phi_i)=0.
+\mathrm{Re}\mathrm{Tr}(\Psi^\dagger\Phi_i)=0.
 ```
 
 Here $`D_i`$ denotes the derivative of the density matrix, not its dimension.
@@ -124,7 +124,7 @@ $`D_i=(\rho L_i^{\rm SLD}+L_i^{\rm SLD}\rho)/2`$. Their real covariance defines
 the SLD Fisher matrix
 
 ```math
-J_{ij}=\operatorname{Re}\operatorname{Tr}
+J_{ij}=\mathrm{Re}\mathrm{Tr}
  (\rho L_i^{\rm SLD}L_j^{\rm SLD}),\qquad J\succeq jI_p,
 \quad j>0.
 ```
@@ -144,28 +144,34 @@ For equal parameter weights, the Holevo value is
 
 ```math
 C_H(I_p)=\min_{X_1,\ldots,X_p}
- \left\{\operatorname{Tr}(\operatorname{Re}Z)
-       +\|\operatorname{Im}Z\|_1\right\},
-\qquad Z_{ij}=\operatorname{Tr}(\rho X_iX_j),
+ \left\{\mathrm{Tr}(\mathrm{Re}Z)
+       +\|\mathrm{Im}Z\|_1\right\},
+\qquad Z_{ij}=\mathrm{Tr}(\rho X_iX_j),
 ```
 
 where $`X_i=X_i^\dagger`$,
-$`\operatorname{Tr}(\rho X_i)=0`$, and
-$`\operatorname{Tr}(D_jX_i)=\delta_{ij}`$. Matrix real and imaginary parts are
+$`\mathrm{Tr}(\rho X_i)=0`$, and
+$`\mathrm{Tr}(D_jX_i)=\delta_{ij}`$. Matrix real and imaginary parts are
 entrywise. The imaginary part is a real antisymmetric matrix; its trace norm
 accounts for incompatibility between the parameters.
 
 Under the usual regularity conditions of finite-dimensional local asymptotic
 quantum estimation, this is the asymptotically attainable coefficient of the
 weighted mean-square error with collective measurements. The algorithm
-evaluates the local optimization. It does not output a collective measurement,
+evaluates the local optimization. The algorithmic promises here do not by
+themselves establish an attainment theorem for every rank-deficient model;
+boundary models require a separate applicable result. The selected
+[estimation bridge](../learning/ESTIMATION_BRIDGE.md) distinguishes these
+conditions from the review's full-rank QLAN setting.
+
+The algorithm does not output a collective measurement,
 a finite-sample estimator, or a guarantee for unrestricted laboratory noise.
 The [related-work account](../references/RELATED_WORK.md) gives the metrology
-sources and the distinction from the SLD bound $`\operatorname{Tr}J^{-1}`$.
+sources and the distinction from the SLD bound $`\mathrm{Tr}J^{-1}`$.
 
 For a real positive definite weight $`W`$, replace the objective by
-$`\operatorname{Tr}(W\operatorname{Re}Z)+
-\|\sqrt W\operatorname{Im}Z\sqrt W\|_1`$.
+$`\mathrm{Tr}(W\mathrm{Re}Z)+
+\|\sqrt W\mathrm{Im}Z\sqrt W\|_1`$.
 The weighted stability theorem retains the extreme eigenvalues of $`W`$.
 The headline algorithm uses $`W=I_p`$ to keep these extra conditioning factors
 visible rather than absorb them into a constant.

@@ -87,8 +87,8 @@ Minimize
 
 
 ```math
-F(K,Z)=\operatorname{Tr}K+\operatorname{Tr}S
--2\operatorname{Re}\operatorname{Tr}Z
+F(K,Z)=\mathrm{Tr}K+\mathrm{Tr}S
+-2\mathrm{Re}\mathrm{Tr}Z
 \tag{5}
 ```
 
@@ -98,10 +98,10 @@ over complex rational matrices K=K† and Z, subject to
 
 ```math
 \begin{pmatrix}K&Z\\Z^\dagger&S\end{pmatrix}\succeq0,
-\quad \operatorname{Tr}K_{00}=1,
+\quad \mathrm{Tr}K_{00}=1,
 \quad K_{00}\succeq\frac\nu2I_r,
-\quad\operatorname{Re}\operatorname{Tr}K_{0i}=0,
-\quad\sum_i\operatorname{Tr}K_{ii}\le2L^2.
+\quad\mathrm{Re}\mathrm{Tr}K_{0i}=0,
+\quad\sum_i\mathrm{Tr}K_{ii}\le2L^2.
 \tag{6}
 ```
 
@@ -140,7 +140,7 @@ Let
 
 
 ```math
-K_c=\operatorname{diag}\left(\frac1rI_r,
+K_c=\mathrm{diag}\left(\frac1rI_r,
 \frac{L^2}{pr}I_{pr}\right),\qquad Z_c=0.
 \tag{9}
 ```
@@ -163,8 +163,8 @@ The feasible set is bounded: Tr K<=T:=1+2L², while block positivity gives
 
 
 ```math
-\|Z\|_F\le\sqrt{\operatorname{Tr}K\operatorname{Tr}S}
-\le\sqrt{T\operatorname{Tr}S}.
+\|Z\|_F\le\sqrt{\mathrm{Tr}K\mathrm{Tr}S}
+\le\sqrt{T\mathrm{Tr}S}.
 \tag{11}
 ```
 
@@ -177,7 +177,9 @@ Numerical optimization may propose K,Z. Round to complex rationals, Hermitize K,
 
 Compute certified lower bounds on the PSD slacks and the scalar budget. If a current matrix slack is at least -eI and the corresponding slack at (9) is at least mu I, mixing with (9) by theta>=e/(mu+e) repairs it. Apply the maximum required theta across the constraints. The affine equations remain exact, and the objective changes linearly, so the cost of repair is explicitly known. Accept only if (7) still holds.
 
-With the known positive slack, proposals can be requested sufficiently accurately that this repair has arbitrarily small objective cost. The required precision has polynomial bit length. A failed check triggers refinement, not an unsupported success statement.
+With the known positive slack, proposals can be requested sufficiently accurately that this repair has arbitrarily small objective cost. The required precision has polynomial bit length. Fix the weak-optimization accuracy and repair budget in advance so that their combined excess objective is at most $`\gamma^2/16`$. On the acquisition success event, the repaired objective is then at most $`\gamma^2/8`$, strictly below the acceptance threshold.
+
+On every branch, run this finite computation and the exact certificate check. Return a failure marker if the target in (7) is not met; outside the acquisition success event, an acceptable fit need not exist. Practical refinement must respect the same fixed accuracy and runtime cutoff. This makes the classical stage finite on unsuccessful acquisition outcomes as well, without changing the stated success probability.
 
 ## 3. Rational compression without numerical square roots
 
@@ -235,13 +237,13 @@ Write x_i=sqrt(D)B_i, where B_i is a complex q-by-r variable. The exact affine c
 
 ```math
 R_0^\dagger D B_i\text{ is Hermitian},\qquad
-\operatorname{Re}\operatorname{Tr}(R_0^\dagger D B_i)=0,
+\mathrm{Re}\mathrm{Tr}(R_0^\dagger D B_i)=0,
 ```
 
 
 
 ```math
-2\operatorname{Re}\operatorname{Tr}(R_j^\dagger D B_i)=\delta_{ij}.
+2\mathrm{Re}\mathrm{Tr}(R_j^\dagger D B_i)=\delta_{ij}.
 \tag{16}
 ```
 
@@ -250,7 +252,7 @@ Covariance is
 
 
 ```math
-Z_{ij}=\operatorname{Tr}B_i^\dagger D B_j.
+Z_{ij}=\mathrm{Tr}B_i^\dagger D B_j.
 \tag{17}
 ```
 
@@ -273,7 +275,7 @@ The fitted Holevo value is exactly
 
 ```math
 \begin{array}{ll}
-\text{minimize}&\operatorname{Tr}C\\
+\text{minimize}&\mathrm{Tr}C\\
 \text{subject to}&A_{\rm eq}y=b,\quad C\in\mathbb S^p,\\
 &M(C,Y):=\begin{pmatrix}C&Y^\dagger\\Y&Q\end{pmatrix}\succeq0.
 \end{array}
@@ -289,7 +291,7 @@ Solve the rational equality-constrained positive quadratic problem
 
 
 ```math
-\min_{A_{\rm eq}y=b}\operatorname{Tr}Y^\dagger Q^{-1}Y.
+\min_{A_{\rm eq}y=b}\mathrm{Tr}Y^\dagger Q^{-1}Y.
 \tag{20}
 ```
 
@@ -307,7 +309,7 @@ Its value equals Tr Jhat^-1, and is at most 8p/j on the tomography success event
 
 
 ```math
-C_0=(\operatorname{Tr}Z_0+1)I_p.
+C_0=(\mathrm{Tr}Z_0+1)I_p.
 \tag{21}
 ```
 
@@ -352,8 +354,8 @@ satisfying
 
 
 ```math
-\operatorname{Re}T_{00}=I_p,
-\qquad A_{\rm eq}^T\mu+2\operatorname{vec}_{\mathbb R}(B)=0.
+\mathrm{Re}T_{00}=I_p,
+\qquad A_{\rm eq}^T\mu+2\mathrm{vec}_{\mathbb R}(B)=0.
 \tag{25}
 ```
 
@@ -362,7 +364,7 @@ Its lower value is
 
 
 ```math
-\ell=\mu^Tb-\operatorname{Tr}(T_{11}Q).
+\ell=\mu^Tb-\mathrm{Tr}(T_{11}Q).
 \tag{26}
 ```
 
@@ -371,8 +373,8 @@ For any primal feasible C,Y,
 
 
 ```math
-\operatorname{Tr}C-\ell
-=\operatorname{Tr}[T M(C,Y)]\ge0.
+\mathrm{Tr}C-\ell
+=\mathrm{Tr}[T M(C,Y)]\ge0.
 \tag{27}
 ```
 
@@ -383,7 +385,7 @@ A certified fitted-model interval is obtained by accepting rational primal and d
 
 
 ```math
-[\ell,u],\qquad u=\operatorname{Tr}C.
+[\ell,u],\qquad u=\mathrm{Tr}C.
 \tag{28}
 ```
 
@@ -398,7 +400,7 @@ Finite bounded search regions can also be supplied to the dual. For any dual poi
 
 
 ```math
-\operatorname{Tr}T\le(\operatorname{Tr}C_0-\ell_0)/\mu_H.
+\mathrm{Tr}T\le(\mathrm{Tr}C_0-\ell_0)/\mu_H.
 \tag{29}
 ```
 

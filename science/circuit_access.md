@@ -23,7 +23,7 @@ component is
 
 Here $`V_0=\Psi`$, $`V_i=\Phi_i`$ for $`i>0`$, and the vectors in the last
 display are **unnormalized** columns. The known normalization satisfies
-$`\alpha^2\ge\operatorname{Tr}K`$. The remainder of the prepared state is
+$`\alpha^2\ge\mathrm{Tr}K`$. The remainder of the prepared state is
 orthogonal in the success flag. All garbage used by the circuit remains part of
 the coherent workspace until it is explicitly traced out for analysis.
 
@@ -74,7 +74,7 @@ orthogonal discarded flags. The reduced label state is exactly
 
 ```math
 \omega=\frac{K^{\mathsf T}}{\alpha^2}
- \oplus\left(1-\frac{\operatorname{Tr}K}{\alpha^2}\right),
+ \oplus\left(1-\frac{\mathrm{Tr}K}{\alpha^2}\right),
 \qquad \dim L=m+1.
 ```
 
@@ -104,18 +104,18 @@ The acquired $`H`$ need not have the exact normalization and tangent constraints
 of a physical local model. Use a strictly feasible convex fit:
 
 ```math
-K_*\succeq0,\qquad \operatorname{Tr}(K_*)_{00}=1,
+K_*\succeq0,\qquad \mathrm{Tr}(K_*)_{00}=1,
 \qquad (K_*)_{00}\succeq\frac\nu2 I_r,
 ```
 
 ```math
-\operatorname{Re}\operatorname{Tr}(K_*)_{0i}=0,
-\qquad \sum_{i=1}^{p}\operatorname{Tr}(K_*)_{ii}\le2L^2.
+\mathrm{Re}\mathrm{Tr}(K_*)_{0i}=0,
+\qquad \sum_{i=1}^{p}\mathrm{Tr}(K_*)_{ii}\le2L^2.
 ```
 
 The relaxed constants give room to certify finite arithmetic at boundary
 points. They do not remove the original promises $`K_{00}\succeq\nu I_r`$,
-$`\sum_i\operatorname{Tr}K_{ii}\le L^2`$ on the input.
+$`\sum_i\mathrm{Tr}K_{ii}\le L^2`$ on the input.
 
 For a target factor radius $`\gamma`$, choose
 
@@ -131,8 +131,8 @@ $`(K_*,Z)`$ obeying
 ```math
 \begin{pmatrix}K_*&Z\\Z^\dagger&H_+\end{pmatrix}\succeq0,
 \qquad
-\operatorname{Tr}K_*+\operatorname{Tr}H_+
- -2\operatorname{Re}\operatorname{Tr}Z\le\frac{\gamma^2}{4}.
+\mathrm{Tr}K_*+\mathrm{Tr}H_+
+ -2\mathrm{Re}\mathrm{Tr}Z\le\frac{\gamma^2}{4}.
 ```
 
 This **primal feasibility certificate** proves
@@ -142,6 +142,11 @@ infer proximity. The true $`K`$ has squared distance at most $`\gamma^2/16`$,
 so the certificate target has positive slack. The regularized lower block and
 the relaxed physical constraints supply the finite-precision construction in
 [certified optimization](certified_optimization.md).
+
+The fit uses a fixed finite weak-optimization and rational-repair budget.
+If its exact certificate does not meet the target, return a failure marker.
+The preceding slack guarantees acceptance on the acquisition success event;
+the cutoff ensures finite runtime on all other outcomes as well.
 
 ## 4. Stability constants and confidence interval
 
